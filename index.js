@@ -6,21 +6,17 @@ module.exports = function(opts) {
   var filesList = [];
   if((typeof opts.files).toLowerCase() == 'string') {
     var path = getMd5Path(opts.files);
-    if(path) {
-      filesList.push({
-        file: opts.files,
-        md5: path
-      });
-    }
+    filesList.push({
+      file: opts.files,
+      md5: path
+    });
   } else if(Array.isArray(opts.files)) {
     opts.files.forEach(function(item) {
       var path = getMd5Path(item);
-      if(path) {
-        filesList.push({
-          file: item,
-          md5: path
-        });
-      }
+      filesList.push({
+        file: item,
+        md5: path
+      });
     });
   }
   return filesList;
