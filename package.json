@@ -1,6 +1,6 @@
 {
   "name": "md5-image-path",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "md5 path of image",
   "main": "index.js",
   "scripts": {
