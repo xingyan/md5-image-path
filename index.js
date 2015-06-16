@@ -4,7 +4,7 @@ var md5 = require('blueimp-md5').md5;
 module.exports = function(opts) {
   if(!opts.files) throw new Error('Need path in module md5-image-path');
   var filesList = [];
-  if((typeof opts.files).toLowerCase() == 'string') {
+  if((typeof opts.files).toLocaleLowerCase() == 'string') {
     var path = getMd5Path(opts.files);
     filesList.push({
       file: opts.files,
